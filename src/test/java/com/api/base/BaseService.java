@@ -1,6 +1,8 @@
 package com.api.base;
 
+import com.api.filters.LoggingFilter;
 import com.api.models.request.LoginRequest;
+import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -13,6 +15,10 @@ public class BaseService { //wrapper for rest Assured
 
     protected void setAuthTocken(String token) {
         requestSpecification.header("Authorization", "Bearer " + token);
+    }
+
+    static {
+        RestAssured.filters(new LoggingFilter());
     }
 
     public BaseService() {

@@ -19,7 +19,6 @@ public class UserProfileResponse {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
-
     }
 
     public String getId() {
