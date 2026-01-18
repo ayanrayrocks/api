@@ -1,6 +1,6 @@
 package com.api.test;
 
-import static io.restassured.RestAssured.given;
+
 
 import com.api.base.AuthService;
 import com.api.models.request.LoginRequest;
@@ -14,6 +14,7 @@ public class LoginAPITest {
     @Test
     public void loginTest(){
         LoginRequest loginRequest = new LoginRequest("ayan@gmail.com","ayan1234");
+        System.out.println(loginRequest.getEmail());
         AuthService authService = new AuthService();
         Response response = authService.login(loginRequest);
 

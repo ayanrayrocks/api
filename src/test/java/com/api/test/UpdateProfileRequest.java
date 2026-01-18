@@ -31,6 +31,5 @@ public class UpdateProfileRequest {
         UserProfileResponse response1 = response.as(UserProfileResponse.class);
         System.out.println(response1.toString());
 
-
     }
 }
